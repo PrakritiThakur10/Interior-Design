@@ -1,0 +1,207 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design</title>
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .toggle-text {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        .toggle-text:hover {
+            color: #0b9fef;
+        }
+
+        .toggle-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .text-container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .text-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 18px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0b9fef;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .fixed-button:hover {
+            background-color: #087dc0;
+        }
+    </style>
+
+    <script>
+        function showContent(contentId) {
+            var contents = document.getElementsByClassName('toggle-content');
+
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
+
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>OUR DESIGNS</h1>
+</header>
+
+<div class="flex-container">
+    <a href="javascript:void(0);" class="toggle-text" onclick="showContent('home')">Home Decor</a>
+    <a href="javascript:void(0);" class="toggle-text" onclick="showContent('office')">Office Decor</a>
+    <a href="javascript:void(0);" class="toggle-text" onclick="showContent('farmhouse')">Farmhouse Decor</a>
+</div>
+
+<hr>
+
+<div class="toggle-content" id="home">
+    <div class="text-container">
+        <h2>HOME DECOR</h2>
+
+        <p>
+            Home decor is the art of designing and decorating residential spaces to make them attractive,
+            functional, and comfortable. It involves selecting furniture, color schemes, lighting,
+            curtains, wall decorations, flooring, and decorative accessories that reflect the homeowner's
+            taste and personality. Modern home decor combines beauty with practicality, ensuring that every
+            room serves its purpose while maintaining an elegant appearance.
+
+            Elements such as indoor plants, artwork, cushions, rugs, and decorative lighting enhance the
+            overall ambiance of a home. A well-designed living room creates a welcoming atmosphere for
+            guests, while thoughtfully decorated bedrooms provide comfort and relaxation. Kitchens and
+            dining areas can be transformed into stylish and functional spaces through smart storage
+            solutions and attractive interior themes.
+
+            Home decor not only improves the visual appeal of a house but also contributes to the emotional
+            well-being of its residents. A carefully decorated home can reduce stress, increase comfort,
+            and create a sense of belonging for every family member.
+        </p>
+    </div>
+</div>
+
+<div class="toggle-content" id="office">
+    <div class="text-container">
+        <h2>OFFICE DECOR</h2>
+
+        <p>
+            Office decor focuses on creating a professional, organized, and productive workspace that
+            supports employee well-being and efficiency. It includes ergonomic furniture, proper lighting,
+            storage solutions, wall designs, and color palettes that contribute to a positive working
+            environment.
+
+            Modern office interiors often incorporate open workspaces, collaborative meeting areas,
+            indoor plants, and technology-friendly layouts that encourage creativity and teamwork.
+            Comfortable seating arrangements and organized workstations help employees remain focused and
+            productive throughout the day.
+
+            The choice of colors and lighting can significantly impact mood and concentration. Natural
+            lighting, calming colors, and clutter-free spaces help reduce workplace stress and improve
+            employee satisfaction. Effective office decor also creates a strong first impression on clients
+            and visitors, reflecting the company's professionalism, values, and brand identity.
+        </p>
+    </div>
+</div>
+
+<div class="toggle-content" id="farmhouse">
+    <div class="text-container">
+        <h2>FARMHOUSE DECOR</h2>
+
+        <p>
+            Farmhouse decor is an interior design style that combines rustic charm with modern comfort to
+            create a warm and inviting atmosphere. Inspired by traditional countryside homes, it emphasizes
+            natural materials such as wood, stone, metal, and cotton fabrics.
+
+            Common features include exposed wooden beams, vintage furniture, neutral color palettes,
+            handcrafted accessories, and cozy textiles. Decorative items such as lanterns, woven baskets,
+            antique pieces, and indoor greenery are often used to enhance the rustic appeal of farmhouse
+            interiors.
+
+            Farmhouse decor creates a peaceful and comfortable environment that connects people with nature
+            while maintaining modern functionality and convenience. The style is known for its simplicity,
+            warmth, and timeless elegance, making it a popular choice for country homes, villas, and modern
+            residences seeking a cozy and welcoming atmosphere.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Interior Design Services. All rights reserved.</p>
+</footer>
+
+<button class="fixed-button" onclick="goToMainPage()">
+    Back to Main Page
+</button>
+
+<script>
+    function goToMainPage() {
+        window.location.href = 'pure interior design.html';
+    }
+</script>
+
+</body>
+</html>
+```
